@@ -2,14 +2,16 @@ from exercicio04 import somar_pares
 
 def cadastrar_aluno(nome, email, serie, nota01, nota02, nota03):
     alunos = []
+
+    notas =  [nota01, nota02, nota03]
     aluno = {
         "nome": nome,
         "email": email,
         "serie": serie,
-        "notas": [nota01, nota02, nota03] 
+        "media": somar_pares([nota01, nota02, nota03])
     }
     alunos.append
-    media = somar_pares(aluno["nota"])
+
     return alunos
 print(cadastrar_aluno("davi", "davisak08@gmail.com", "2tb", 10, 9, 8))
 
