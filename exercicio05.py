@@ -30,7 +30,7 @@ def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
 
 def mostrar_dados_alunos(dados_alunos):
     for aluno in dados_alunos:
-        print(f"nome do aluno: {aluno["nome"]}")
+        print(f"nome do aluno: {aluno["nome"]} | email do aluno: {aluno["email"]} | serie do aluno {aluno["serie"]} | notas do aluno {aluno["nota"]} |media do aluno {aluno["media"]}") 
     return
 
 def iniciar_sistema():
@@ -41,8 +41,18 @@ def iniciar_sistema():
         print("opcao 3 => sair")
         print("="*80)
         opcao = input("escolha uma das opcoes acima")
+        
 
+        if opcao == "1":
+            mostrar_dados_alunos(alunos)
+        elif opcao == "2":
+            obter_dados_aluno()
+        else:
+            print("sistema finalizado")
+            break
+ 
 iniciar_sistema()
+
 
 
 
