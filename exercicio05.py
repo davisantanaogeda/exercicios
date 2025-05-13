@@ -1,19 +1,25 @@
 from exercicio04 import somar_pares
 
-def cadastrar_aluno(nome, email, serie, nota01, nota02, nota03):
-    alunos = []
+alunos = []
+
+def cadastrar_aluno(nome, email, serie, nota01=0, nota02=0, nota03=0):
+
 
     notas =  [nota01, nota02, nota03]
+
     aluno = {
         "nome": nome,
         "email": email,
         "serie": serie,
         "media": somar_pares([nota01, nota02, nota03])
     }
-    alunos.append
+    alunos.append(aluno)
 
     return alunos
-print(cadastrar_aluno("davi", "davisak08@gmail.com", "2tb", 10, 9, 8))
+def mostrar_dados_alunos(dados_alunos):
+    return print(dados_alunos)
+
+mostrar_dados_alunos(alunos)
 
 
 
